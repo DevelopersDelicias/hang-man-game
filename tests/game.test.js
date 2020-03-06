@@ -12,7 +12,16 @@ describe("Game Rules", () => {
     const game = new Game("World");
     const currentWord = game.currentWord();
 
-    const expected = "_ _ _ _";
+    const expected = "_ _ _ _ _";
+
+    expect(currentWord).toEqual(expected);
+  });
+
+  it("when game starts displays a _ for each letter in the selected word", () => {
+    const game = new Game("Benjamin");
+    const currentWord = game.currentWord();
+
+    const expected = "_ _ _ _ _ _ _ _";
 
     expect(currentWord).toEqual(expected);
   });

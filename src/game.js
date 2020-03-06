@@ -1,10 +1,16 @@
 class Game {
+  constructor(word) {
+    this.word = word;
+  }
   remainingPoints() {
     return 10;
   }
 
   currentWord() {
-    return "_ _ _ _";
+    return this.word
+      .split("")
+      .map(letter => "_")
+      .join(" ");
   }
 }
 
